@@ -16,6 +16,7 @@ class DistributionController extends Controller
     {
         $validated = $request->validate([
             'recipient_name' => 'required|string|max:255',
+            'recipient_contact' => 'nullable|string|max:255',
             'amount' => 'required|numeric|min:1',
             'details' => 'required|string',
             'item_image_path' => 'nullable|image',
