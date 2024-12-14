@@ -22,6 +22,10 @@ class ProgrammerController extends Controller
 
     public function index()
     {
-        return Programmer::all();
+        // Mengambil semua data programmer
+        $programmers = Programmer::all();
+
+        // Mengembalikan view dengan data programmer
+        return view('programmers.index', compact('programmers')); // Pastikan nama view sesuai
     }
 }
